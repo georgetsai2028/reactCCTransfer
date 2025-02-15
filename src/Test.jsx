@@ -7,7 +7,7 @@ export function List(props){
     return(
         <ul>
             {props.animalList.map((animal)=> {
-                return <ListItem key={animal} animal = {animal} />;
+                return animal.startsWith("T") ? <ListItem key={animal} animal = {animal} /> : null ;
             })}
         </ul>
     );
