@@ -4,28 +4,24 @@ export function ListItem(props){
 }   
 
 export function List(props){
-    
-        if (!props.animalList)
-        {
-            return <div> Loading...</div>
-        }
-
-        if (props.animalList.length === 0)
-        {
-            return <div>There are no animals in the list!</div>
-        }
-        return (
+    return(
+       <> 
+       {!props.animalList && <div>Loading... </div>}
+       {props.animalList && props.animalList.length > 0 && (
         <ul>
-            {props.animalList.map((animal)=> {
-                return animal.startsWith("T") && <ListItem key={animal} animal = {animal} />;
+            {props.animalList.map((animal) =>{
+            return <ListItem key={animal} animal= {animal} />;
             })}
         </ul>
+       )}
+       {props.animalList && props.animalList.length === 0 && <div> No animals in lists</div>}
+       </>
     );
-
 }
 
+
 export function Test(){
-    const animals = ["Bear", "Zebra", "Tiger", "Panda", "Dog", "Terry the Tusk"];
+    const animals = [];
     return (
         <div>
             <h1> Animals: </h1>
