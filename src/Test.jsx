@@ -21,7 +21,7 @@ export function List(props){
 
 
 export function Test(){
-    const animals = [];
+    const animals = ["Dog", "Bear", "Lion"];
     return (
         <div>
             <h1> Animals: </h1>
