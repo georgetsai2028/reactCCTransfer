@@ -4,11 +4,12 @@ import './index.css'
 import App from './App.jsx'
 import Greeting from './greetings.jsx'
 import Test from './Test.jsx'
+import DisplayProfile from './Profile.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-  <Test />
   <Greeting />
-  <App />
+  <DisplayProfile />
+
   </StrictMode>,
 )
