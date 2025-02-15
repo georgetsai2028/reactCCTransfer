@@ -7,7 +7,7 @@ export function List(props){
     return(
         <ul>
             {props.animalList.map((animal)=> {
-                return <ListItem key={animal} animalList = {animal} />;
+                return <ListItem key={animal} animal = {animal} />;
             })}
         </ul>
     );
