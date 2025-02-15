@@ -5,12 +5,12 @@ export function ListItem(props){
 
 export function List(props){
     
-        if (!props.animals)
+        if (!props.animalList)
         {
             return <div> Loading...</div>
         }
 
-        if (props.animals.length === 0)
+        if (props.animalList.length === 0)
         {
             return <div>There are no animals in the list!</div>
         }
