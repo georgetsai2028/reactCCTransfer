@@ -1,20 +1,19 @@
-function ListItem(props){
-    return (
-        <li>{props.animalList}</li>
-    )
+export function ListItem(props){
+    return <li> {props.animal}</li>
+    
 }
 
-function List(props){
+export function List(props){
     return(
         <ul>
-            {props.animals.map((animal)=> {
-                return <ListItem key = {animal} animalList = {animal} />;
+            {props.animalList.map((animal)=> {
+                return <ListItem key={animal} animalList = {animal} />;
             })}
         </ul>
-    )
+    );
 }
 
-function Test(){
+export function Test(){
     const animals = ["Bear", "Zebra", "Tiger", "Panda", "Dog"];
     return (
         <div>
@@ -24,4 +23,3 @@ function Test(){
     );
     
 }
-export default Test;
