@@ -7,6 +7,8 @@ import Test from './Test.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Test />
+  <Test />
+  <Greeting />
+  <App />
   </StrictMode>,
 )
