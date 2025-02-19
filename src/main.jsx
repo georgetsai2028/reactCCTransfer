@@ -5,10 +5,10 @@ import App from './App.jsx'
 import Greeting from './greetings.jsx'
 import { Test, List, ListItem} from './Test.jsx'
 import DisplayProfile from './Profile.jsx'
-import {TodoList, Button} from './Todo.jsx'
+import {TodoList, Button, ChangeColor} from './Todo.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-  <TodoList />
+  <ChangeColor />
   </StrictMode>,
 )

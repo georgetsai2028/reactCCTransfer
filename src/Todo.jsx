@@ -1,3 +1,7 @@
+import { useState } from 'react';
+import './Todo.css'
+
+const COLORS = ["red", "blue", "pink", "purple", "white"]
 const todos = [
     { task: "Mow the backyard", id: crypto.randomUUID },
     { task: "Work on Odin Project", id: crypto.randomUUID },
@@ -5,7 +9,8 @@ const todos = [
 ]
 
 export function Button ({text = "Click Me", color = "purple", fontSize = 12, handleClick }) {
-    const buttonStyle ={
+
+     const buttonStyle = {
         color: color,
         fontSize: fontSize + 'px'
     };
@@ -14,6 +19,23 @@ export function Button ({text = "Click Me", color = "purple", fontSize = 12, han
     </button>
 };
 
+export function ChangeColor(){
+    const [backgroundColor, setBackgroundColor] = useState(COLORS[0]);
+    const onButtonClick = (color) => () => {
+        setBackgroundColor(color);
+    };
+    return (
+        <div className = "ChangeColor" style ={{backgroundColor}} >
+            {COLORS.map((color) => (
+                <button type = "button" key ={color} onClick={onButtonClick(color)}
+                className={backgroundColor === color ? 'selected' : ''}
+            >
+                {color}
+            </button>
+            ))}
+        </div>
+    )
+}
 
 export function TodoList() {
     const handleButtonClick = (url) => {
