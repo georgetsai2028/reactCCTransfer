@@ -1,5 +1,12 @@
 body {
-    background-color: aliceblue;
-    padding: 100%;
+    background-color: rgb(47, 112, 169);
     margin: 0;
+}
+
+button {
+    font-size: 40px;
+}
+
+.ChangeColor{
+    padding: 100px;
 }
